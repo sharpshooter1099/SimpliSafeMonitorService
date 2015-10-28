@@ -1,7 +1,9 @@
 # SimpliSafeMonitorService
 a windows service which executes a specific .exe file when your SimpliSafe alarm status changes.  this service polls
 the simplisafe servers once every 5 minutes to get the status of the alarm.  when the status changes, the service
-executes a specified file along with any arguments specific to the new status.
+executes a specified file along with any arguments specific to the new status.  this uses my own API to retrieve the 
+alarm status.  this is accomplished using my dll, SimpliSafeCommunicator.dll, and the Newtonsoft.Json.dll for processing
+some of the JSON data.
 
 how to use:
 first, install the SimpliSafeMonitorService.exe as a windows service.  for instructions on how to install it, search for
